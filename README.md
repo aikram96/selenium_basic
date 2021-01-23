@@ -1,13 +1,24 @@
-# basic_selenium
+# BASIC_SELENIUM
 Basic training to know how to use selenium python with chrome and firefox driver
 
-Selenium - Chrome - Python
+## Table of Contents
+1. [General Info](#Selenium)
+2. [Technologies](#Selenium)
+3. [Installation](#Installation)
 
-1. python install
-search stable version to download: 3.7 or more
+### General Info:
+New technologies have revolutionized the world in a very short time and the vast majority of companies cannot constantly update themselves. Thanks to the various evolutions, we can today speak of automated software processes when not many years ago this was unthinkable.
+
+### Selenium:
+Selenium is a testing environment uses to comprobate if the software developed works in the best way. This tool allow: recorder, edit, create and debug any testing that you can automate.
+
+### Installation:
+
+##### 1. python install
+Search stable version to download: 3.7 or more
 >> https://www.python.org/downloads/
 
-2. Verify if the installation were correct:
+##### 2. Verify if the installation were correct:
 
 2.A Open CMD and put
 >> python -version
@@ -17,21 +28,21 @@ Should be read the version of your python
 >> python --version
 Should be read the version of your python
 
-3. Pycharm install
+##### 3. Pycharm install
 >> https://www.jetbrains.com/es-es/pycharm/
 Follow the manual instructions
 
 >> Open the pycharm
 >> Create a new directory, you can called: "Automatización"
 
-4. Select the language PYTHON for Selenium Web driver 
+##### 4. Select the language PYTHON for Selenium Web driver 
 >> https://www.selenium.dev/downloads/
 Selenium Client & Web Driver for the language.
 
 >> Open the Pycharm' terminal (down side)
 >> Put: pip install selenium
 
-5. Choose the CONTROLLER
+##### 5. Choose the CONTROLLER
 Browsers for the web navegator.
 Chrome could be your option
 
