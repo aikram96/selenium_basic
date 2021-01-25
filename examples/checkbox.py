@@ -1,6 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import Select
 import time
 
 driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe")
@@ -41,6 +39,24 @@ print("Is it on the screen? " + str(deprecated_checkbox.is_displayed()))
 time.sleep(1)
 
 edit_btn = driver.find_element_by_id('btnSave')
+#edit_btn.click()
+
+#time.sleep(1)
+
+list_checkboxes = driver.find_elements_by_css_selector("li[class='checkbox']>input")
+
+for checkbox in list_checkboxes:
+    if checkbox.is_displayed() is True and checkbox.is_enabled() is False:
+        edit_btn.click()
+        time.sleep(3)
+
+    if checkbox.is_displayed() is True and checkbox.is_selected() is False:
+        time.sleep(3)
+        checkbox.click()
+
+    else:
+        checkbox.click()
+
 edit_btn.click()
 
 time.sleep(5)
