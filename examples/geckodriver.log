@@ -21,3 +21,14 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1611795532945	geckodriver	INFO	Listening on 127.0.0.1:50452
+1611795535986	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\aikra\\AppData\\Local\\Temp\\rust_mozprofileu1BRGo"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1611795542523	Marionette	INFO	Listening on port 50461
+1611795542854	Marionette	WARN	TLS certificate errors will be ignored for this session
+1611795559542	Marionette	INFO	Stopped listening on port 50461
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
