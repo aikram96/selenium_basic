@@ -1,8 +1,9 @@
+from ddt import ddt, data, file_data
 from selenium import webdriver
 import unittest
-import HtmlTestRunner
 
-class unittest_login(unittest.TestCase):
+@ddt
+class DataDrivenLogin(unittest.TestCase):
 
     def setUp(self):
         # pre conditions
@@ -10,17 +11,14 @@ class unittest_login(unittest.TestCase):
         self.driver.get("https://opensource-demo.orangehrmlive.com/")
         self.driver.maximize_window()
 
-    def test_login_page(self):
-        # first test
-        tittle_login_page = self.driver.title
-        self.assertEqual(tittle_login_page, "OrangeHRM")
+    # @data("admin", 3, -3)
+    @file_data("../config/data_login.json")
+    def test_validate_login(self, value_username, value_password):
 
-    def test_validate_login(self):
-        # second test
         username = self.driver.find_element_by_id('txtUsername')
         password = self.driver.find_element_by_id('txtPassword')
-        username.send_keys("Admin")
-        password.send_keys("admin123")
+        username.send_keys(value_username)
+        password.send_keys(value_password)
         login_btn = self.driver.find_element_by_id('btnLogin')
         login_btn.click()
 
@@ -31,4 +29,4 @@ class unittest_login(unittest.TestCase):
         self.driver.quit()
 
 if __name__ == '__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='../reports', report_name='Login unittest'))
+    unittest.main()
